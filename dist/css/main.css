@@ -197,6 +197,9 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #main-main .home-a .about h2 {
@@ -220,6 +223,7 @@ p {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  margin: auto;
 }
 
 #main-main .home-a .about .txt-wraper {
@@ -229,7 +233,7 @@ p {
   padding: 1rem;
 }
 
-#main-main .home-a .contact .contact-wraper {
+#main-main .home-a .contact-wraper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,16 +242,67 @@ p {
           justify-content: center;
 }
 
-#main-main .home-a .contact .contact-wraper .item {
+#main-main .home-a .contact-wraper .item {
   padding: 1rem 3rem;
   border-right: 2px solid #ccc;
 }
 
-#main-main .home-a .contact .contact-wraper .item:last-child {
+#main-main .home-a .contact-wraper .item:last-child {
   border-right: none;
 }
 
-#main-main .home-a .contact .contact-wraper .item h3 {
+#main-main .home-a .contact-wraper .item h3 {
   padding: 1rem;
   font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  #main-header #main-nav {
+    height: auto;
+  }
+  #main-header #main-nav .container {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #main-header #main-nav .container .logo {
+    width: 120px;
+  }
+  #main-header .header-content h1 {
+    font-size: 2rem;
+  }
+  #main-header .header-content .btn {
+    padding: 0.5rem 1rem;
+  }
+  #main-main .home-a .about {
+        grid-template-areas: "title" "line" "card-img" "card-txt";
+  }
+  #main-main .home-a .about img {
+    width: 150px;
+    height: 150px;
+  }
+  #main-main .home-a .contact-wraper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #main-main .home-a .contact-wraper .item {
+    border: none;
+    border-bottom: 2px solid #ccc;
+  }
+  #main-main .home-a .contact-wraper .item:last-child {
+    border-bottom: none;
+  }
+  #footer p {
+    font-size: 1rem;
+  }
 }

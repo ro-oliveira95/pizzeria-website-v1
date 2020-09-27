@@ -151,6 +151,7 @@ p {
             "line line"
             "card-img card-txt";
           align-items: center;
+          justify-content: center;
           h2 {
             grid-area: title;
           }
@@ -162,6 +163,7 @@ p {
             width: 200px;
             height: 200px;
             border-radius: 50%;
+            margin: auto;
           }
           .txt-wraper {
             grid-area: card-txt;
@@ -169,23 +171,22 @@ p {
           }
         }
 
-        .contact {
-          .contact-wraper {
-            display: flex;
-            justify-content: center;
-            // gap: 4rem;
-            .item {
-              padding: 1rem 3rem;
-              border-right: 2px solid #ccc;
+        .contact-wraper {
+          display: flex;
+          justify-content: center;
+          // gap: 4rem;
+          .item {
+            padding: 1rem 3rem;
+            // border: none;
+            border-right: 2px solid #ccc;
 
-              &:last-child {
-                border-right: none;
-              }
+            &:last-child {
+              border-right: none;
+            }
 
-              h3 {
-                padding: 1rem;
-                font-weight: bold;
-              }
+            h3 {
+              padding: 1rem;
+              font-weight: bold;
             }
           }
         }
@@ -193,3 +194,5 @@ p {
     }
   }
 }
+
+@import "media";

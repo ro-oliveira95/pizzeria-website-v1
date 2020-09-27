@@ -1,0 +1,64 @@
+@media (max-width: 500px) {
+  #main-header {
+    #main-nav {
+      height: auto;
+
+      .container {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+          width: 120px;
+        }
+      }
+    }
+
+    .header-content {
+      h1 {
+        font-size: 2rem;
+      }
+      .btn {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  #main-main {
+    .home-a .about {
+      grid-template-areas:
+        "title"
+        "line"
+        "card-img"
+        "card-txt";
+    }
+  }
+
+  #main-main {
+    .home-a {
+      .about img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .contact-wraper {
+        flex-direction: column;
+
+        .item {
+          border: none;
+          // border-right: 2px transparent rgba(204, 204, 204, 0);
+          border-bottom: 2px solid #ccc;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  #footer p {
+    font-size: 1rem;
+  }
+}
