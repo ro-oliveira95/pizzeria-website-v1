@@ -35,6 +35,126 @@
   margin-bottom: 0.5rem;
 }
 
+@-webkit-keyframes animate-smoke1 {
+  0% {
+    opacity: 0.2;
+    top: 80px;
+  }
+  50% {
+    opacity: 0.6;
+    top: 40px;
+  }
+  100% {
+    opacity: 0;
+    top: 0px;
+  }
+}
+
+@keyframes animate-smoke1 {
+  0% {
+    opacity: 0.2;
+    top: 80px;
+  }
+  50% {
+    opacity: 0.6;
+    top: 40px;
+  }
+  100% {
+    opacity: 0;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes animate-smoke2 {
+  0% {
+    opacity: 0.2;
+    top: 20px;
+  }
+  50% {
+    opacity: 0.6;
+    top: -20px;
+  }
+  100% {
+    opacity: 0;
+    top: -60px;
+  }
+}
+
+@keyframes animate-smoke2 {
+  0% {
+    opacity: 0.2;
+    top: 20px;
+  }
+  50% {
+    opacity: 0.6;
+    top: -20px;
+  }
+  100% {
+    opacity: 0;
+    top: -60px;
+  }
+}
+
+@-webkit-keyframes animate-smoke3 {
+  0% {
+    opacity: 0.2;
+    top: 120px;
+  }
+  50% {
+    opacity: 0.6;
+    top: 80px;
+  }
+  100% {
+    opacity: 0;
+    top: 40px;
+  }
+}
+
+@keyframes animate-smoke3 {
+  0% {
+    opacity: 0.2;
+    top: 120px;
+  }
+  50% {
+    opacity: 0.6;
+    top: 80px;
+  }
+  100% {
+    opacity: 0;
+    top: 40px;
+  }
+}
+
+@-webkit-keyframes animate-smoke4 {
+  0% {
+    opacity: 0.2;
+    top: 140px;
+  }
+  50% {
+    opacity: 0.6;
+    top: 100px;
+  }
+  100% {
+    opacity: 0;
+    top: 60px;
+  }
+}
+
+@keyframes animate-smoke4 {
+  0% {
+    opacity: 0.2;
+    top: 140px;
+  }
+  50% {
+    opacity: 0.6;
+    top: 100px;
+  }
+  100% {
+    opacity: 0;
+    top: 60px;
+  }
+}
+
 /* ---- RESETTING ---- */
 * {
   margin: 0;
@@ -155,22 +275,66 @@ p {
 }
 
 #main-header .header-content {
-  display: block;
-  position: absolute;
-  width: auto;
+  display: relative;
+  width: 100%;
+  height: 100%;
   margin: auto;
-  top: 22vh;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   text-align: center;
   z-index: 1;
 }
 
+#main-header .header-content .effect-smoke {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  max-width: 20%;
+  opacity: 0.2;
+  -webkit-animation: animate-smoke1 5s infinite linear;
+          animation: animate-smoke1 5s infinite linear;
+}
+
+#main-header .header-content .effect-smoke-2 {
+  top: 20px;
+  left: 20%;
+  -webkit-animation-name: animate-smoke2;
+          animation-name: animate-smoke2;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#main-header .header-content .effect-smoke-3 {
+  top: 120px;
+  left: 60%;
+  -webkit-animation-name: animate-smoke3;
+          animation-name: animate-smoke3;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+#main-header .header-content .effect-smoke-4 {
+  top: 140px;
+  left: 80%;
+  -webkit-animation-name: animate-smoke4;
+          animation-name: animate-smoke4;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
 #main-header .header-content h1 {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 2rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 4rem;
+  letter-spacing: 4px;
+  font-family: "Tillana", cursive;
+  text-shadow: 10px 10px 10px coral;
   color: #fff;
-  font-size: 3rem;
   margin-bottom: 1rem;
+  z-index: 10;
 }
 
 #main-header .header-content .btn {

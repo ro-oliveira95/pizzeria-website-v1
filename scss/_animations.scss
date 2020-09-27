@@ -1,0 +1,58 @@
+@import "variables";
+
+@keyframes animate-smoke1 {
+  0% {
+    opacity: 0.2;
+    top: $smoke1-pos-ini-y;
+  }
+  50% {
+    opacity: 0.6;
+    top: $smoke1-pos-ini-y - 40px;
+  }
+  100% {
+    opacity: 0;
+    top: $smoke1-pos-ini-y - 80px;
+  }
+}
+@keyframes animate-smoke2 {
+  0% {
+    opacity: 0.2;
+    top: $smoke2-pos-ini-y;
+  }
+  50% {
+    opacity: 0.6;
+    top: $smoke2-pos-ini-y - 40px;
+  }
+  100% {
+    opacity: 0;
+    top: $smoke2-pos-ini-y - 80px;
+  }
+}
+@keyframes animate-smoke3 {
+  0% {
+    opacity: 0.2;
+    top: $smoke3-pos-ini-y;
+  }
+  50% {
+    opacity: 0.6;
+    top: $smoke3-pos-ini-y - 40px;
+  }
+  100% {
+    opacity: 0;
+    top: $smoke3-pos-ini-y - 80px;
+  }
+}
+@keyframes animate-smoke4 {
+  0% {
+    opacity: 0.2;
+    top: $smoke4-pos-ini-y;
+  }
+  50% {
+    opacity: 0.6;
+    top: $smoke4-pos-ini-y - 40px;
+  }
+  100% {
+    opacity: 0;
+    top: $smoke4-pos-ini-y - 80px;
+  }
+}
