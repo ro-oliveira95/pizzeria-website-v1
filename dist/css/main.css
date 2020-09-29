@@ -700,6 +700,7 @@ p {
   .menuItens-wraper .menuItem-card .card-wraper .card-actions {
     font-size: 0.6rem;
     padding: 0;
+    gap: 1rem;
   }
   .menuItens-wraper .menuItem-card .card-wraper .card-actions button {
     padding: 0.2rem 0.5rem;
