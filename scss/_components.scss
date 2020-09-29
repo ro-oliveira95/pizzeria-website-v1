@@ -1,0 +1,131 @@
+#main-nav {
+  width: 100%;
+  height: $navbar-height;
+  background-color: $color-primary;
+  opacity: 0.9;
+  position: fixed;
+  z-index: 3;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      display: flex;
+      gap: 20px;
+
+      li a.btn-nav {
+        background: none;
+        font-size: 1.3rem;
+        border-radius: 0;
+        border-bottom: 3px solid rgba(1, 1, 1, 0);
+        // transition: border-bottom 0.25s;
+
+        &:hover {
+          border-bottom: 3px solid $color-secondary;
+        }
+      }
+
+      li[class="expandItem"] {
+        display: none;
+      }
+    }
+  }
+}
+
+.expanded-nav {
+  // background-color: red;
+  position: fixed;
+  top: $navbar-height-media;
+  background-color: $color-primary;
+  opacity: 0.9;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  z-index: 3;
+
+  ul li a {
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+  }
+}
+
+.menuItens-wraper {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem;
+
+  .menuItem-card {
+    width: 100%;
+    background: rgb(228, 227, 227);
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    img {
+      width: 100%;
+      height: 250px;
+      margin-bottom: 0.5rem;
+    }
+    .card-info {
+      h3 {
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 0.2rem;
+      }
+      p {
+        text-align: center;
+        width: auto;
+        margin: auto;
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: space-between;
+
+      .btn {
+        font-weight: 100;
+        background-color: $color-secondary;
+      }
+      .btn-add {
+        background-color: rgb(41, 124, 20);
+      }
+    }
+  }
+}
+
+#footer {
+  width: 100%;
+  height: 70px;
+  background-color: $color-primary;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+
+  p {
+    font-size: 1.2rem;
+    color: $color-light;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}

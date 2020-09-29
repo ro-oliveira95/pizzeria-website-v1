@@ -1,6 +1,7 @@
 @import "variables";
-@import "utils";
 @import "animations";
+@import "components";
+@import "utils";
 
 /* ---- RESETTING ---- */
 
@@ -14,6 +15,8 @@ html,
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
+  color: $color-dark;
+  background-color: $color-bg;
 }
 
 ul {
@@ -22,6 +25,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: $color-dark;
 }
 
 h1,
@@ -32,27 +36,6 @@ h2 {
 
 p {
   margin: 10px 0;
-}
-
-/* ---- Components ---- */
-#footer {
-  width: 100%;
-  height: 70px;
-  background-color: $color-primary;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
-
-  p {
-    font-size: 1.2rem;
-    color: $color-light;
-
-    span {
-      font-weight: bold;
-    }
-  }
 }
 
 /* ---- Home page ---- */
@@ -76,38 +59,6 @@ p {
       height: 50vh;
       background-color: rgba(3, 3, 3, 0.61);
       z-index: 1;
-    }
-
-    #main-nav {
-      width: 100%;
-      height: $navbar-height;
-      background-color: $color-primary;
-      opacity: 0.9;
-      position: fixed;
-      z-index: 2;
-
-      .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        ul {
-          display: flex;
-          gap: 20px;
-
-          li a.btn-nav {
-            background: none;
-            font-size: 1.3rem;
-            border-radius: 0;
-            border-bottom: 3px solid rgba(1, 1, 1, 0);
-            // transition: border-bottom 0.25s;
-
-            &:hover {
-              border-bottom: 3px solid $color-secondary;
-            }
-          }
-        }
-      }
     }
 
     .header-content {
@@ -161,10 +112,10 @@ p {
         font-size: 4rem;
         letter-spacing: 4px;
         font-family: "Tillana", cursive;
-        text-shadow: 10px 10px 10px coral;
+        text-shadow: 5px 5px 10px coral;
         color: $color-light;
         margin-bottom: 1rem;
-        z-index: 10;
+        z-index: 2;
       }
 
       .btn {
@@ -231,6 +182,58 @@ p {
             }
           }
         }
+      }
+    }
+  }
+}
+
+/* ---- Menu page ---- */
+
+#menu {
+  &-main {
+    .menu {
+      // section one: summary
+      &-a {
+        margin-top: 2rem;
+
+        .menu-summary {
+          width: 100%;
+          border: 1px solid $color-primary;
+          border-radius: 20px;
+          display: flex;
+          padding: 1rem;
+          justify-content: center;
+          // gap: 1rem;
+
+          li {
+            a {
+              text-align: center;
+              font-size: 1.8rem;
+              font-weight: 100;
+              background-color: $color-light;
+              color: $color-dark;
+              border-right: 1px solid #ccc;
+              padding: 0.5rem 1.5rem;
+
+              &:hover {
+                color: $color-secondary;
+              }
+            }
+
+            &:last-child {
+              a {
+                border-right: none;
+              }
+            }
+          }
+        }
+      }
+
+      // section: promotions
+      &-section {
+        width: 100%;
+        padding: 2rem;
+        overflow: hidden;
       }
     }
   }

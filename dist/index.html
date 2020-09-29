@@ -25,12 +25,29 @@
     <header id="main-header">
       <nav id="main-nav">
         <div class="container">
-          <img src="img/logo.png" alt="logo" class="logo" />
+          <a href="index.html"
+            ><img src="img/logo.png" alt="logo" class="logo"
+          /></a>
           <ul>
-            <li><a href="menu.html" class="btn btn-nav">Cardápio</a></li>
-            <li><a href="checkout.html" class="btn btn-nav">Checkout</a></li>
+            <li class="expandItem">
+              <button class="btn btn-hamburguer">
+                <i class="fas fa-bars"></i>
+              </button>
+            </li>
+            <li class="normalItem">
+              <a href="menu.html" class="btn btn-nav">Cardápio</a>
+            </li>
+            <li class="normalItem">
+              <a href="#" class="btn btn-nav">Checkout</a>
+            </li>
           </ul>
         </div>
+      </nav>
+      <nav class="expanded-nav">
+        <ul>
+          <li><a href="menu.html" class="btn btn-nav">Cardápio</a></li>
+          <li><a href="#" class="btn btn-nav">Checkout</a></li>
+        </ul>
       </nav>
       <div class="header-content">
         <img src="img/smoke-effect2.png" class="effect-smoke effect-smoke-1" />
@@ -96,5 +113,8 @@
         <span> Pizza Place </span> &copy; 2020 - Todos os direitos reservados.
       </p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
   </body>
 </html>
