@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="css/adm-page.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/icons-project1.css">
+<!-- <h1>Hi <%= name %></h1> -->
+  
+<nav class="container-navbar-adm">
+  <ul id="side-navbar-adm">
+    <li>
+      <a href="#">
+        <img id="logo" src="./images/logo-new.png" alt="">
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+          <i class="icons icon-pizza"></i>
+          <span class="link-text">Pedidos</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+          <i class="icons icon-chart-bar"></i>
+          <span class="link-text">Estatísticas</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <form action="/logout?_method=DELETE" method="POST" class="form-submit">
+        <button class="btn-logout" type="submit">Log Out</button>
+      </form>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <div class="top-navbar-adm" >
+    <!-- <h1>Dashboard <%= nomeLoja %></h1> -->
+    <h1>Dashboard</h1>
+  </div>
+  <div class="container-content-adm">
+    <div class="content-box">
+      <h1>Pedidos on/off</h1>
+      <div class="content">
+        <form id="form-status">
+          <button class="toggle" type="submit">Abrir/Fechar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/storeActions.js"></script>
+
